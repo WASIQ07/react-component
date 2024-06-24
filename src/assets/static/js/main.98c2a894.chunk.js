@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{13:function(e,n,t){"use strict";t.r(n);var a=t(0),o=t.n(a),c=t(2),l=t.n(c),r=t(3);var m=()=>o.a.createElement("div",null,o.a.createElement("h1",null,"Hello from React Component!"));const i=Object(r.a)(m,o.a,l.a);customElements.define("my-react-component",i),window.singleSpaNavigate||l.a.render(o.a.createElement(m,null),document.getElementById("root"))},5:function(e,n,t){e.exports=t(13)}},[[5,1,2]]]);
+//# sourceMappingURL=main.98c2a894.chunk.js.map

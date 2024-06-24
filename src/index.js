@@ -1,17 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+import reactToWebComponent from 'react-to-webcomponent';
+import MyComponent from './components/MyComponent';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const WebMyComponent = reactToWebComponent(MyComponent, React, ReactDOM);
+customElements.define('my-react-component', WebMyComponent);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Optional: For standalone React app development
+if (!window.singleSpaNavigate) {
+  ReactDOM.render(<MyComponent />, document.getElementById('root'));
+}
